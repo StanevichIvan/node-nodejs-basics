@@ -7,7 +7,7 @@ const ERROR_MESSAGE = "FS operation failed";
 
 const rename = async () => {
   try {
-    renameFs(
+    await renameFs(
       `${SOURCE_DIR}/${OLD_FILE_NAME}`,
       `${SOURCE_DIR}/${NEW_FILE_NAME}`
     );
