@@ -1,6 +1,9 @@
 import { readFile } from "node:fs/promises";
-
-const SOURCE_DIR = "./files";
+import { fileURLToPath } from "url";
+import path from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const SOURCE_DIR = `${__dirname}/files`;
 const FILE_NAME = "fileToRead.txt";
 const ERROR_MESSAGE = "FS operation failed";
 

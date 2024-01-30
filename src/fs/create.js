@@ -1,7 +1,11 @@
 import { open } from "node:fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const FILE_NAME = "fresh.txt";
-const PATH = "./files";
+const PATH = `${__dirname}/files`;
 const ERROR_MESSAGE = "FS operation failed";
 const FILE_CONTENT = "I am fresh and young";
 
